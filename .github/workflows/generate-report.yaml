@@ -18,5 +18,8 @@ jobs:
         with:
           node-version: '12'
 
+      - name: install npm
+        run: npm install
+      
       - name: run npm audit
         run: npm audit
