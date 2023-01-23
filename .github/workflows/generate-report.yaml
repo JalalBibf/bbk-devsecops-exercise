@@ -14,9 +14,7 @@ jobs:
     steps:
 
       - name: install node 
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+        uses: actions/setup-node@v18
 
       - name: install npm
         run: npm install
