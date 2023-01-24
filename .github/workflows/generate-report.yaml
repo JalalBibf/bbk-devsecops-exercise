@@ -33,7 +33,14 @@ jobs:
         uses: jpetrucciani/bandit-check@main
         with:
           path: '.'
+          bandit_flags: '-lll -o bandit-report.json -f json'
         continue-on-error: true
+      
+      - name: Upload bandit Audit Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: bandit-audit-report
+          path: bandit-report.json
 
   build-dummy:
     name: Build Echo Statement
